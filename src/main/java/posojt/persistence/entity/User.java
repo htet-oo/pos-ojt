@@ -52,7 +52,7 @@ public class User {
 	private Role role;
 	
 	@OneToOne(mappedBy = "user")
-	private UserProfile user_profile;
+	private UserProfile userProfile;
 	
 	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
 	private List<Order> order;
