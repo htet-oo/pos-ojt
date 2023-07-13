@@ -84,6 +84,8 @@
 				<prop key="hibernate.format_sql">true</prop>
 			</props>
 		</property>
+		<property name="packagesToScan"
+			value="posojt.persistence.entity"/>
 	</bean>
 
 	<tx:annotation-driven
