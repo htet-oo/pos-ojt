@@ -15,7 +15,7 @@
 	<!-- Context Annotation and Configuration -->
 	<context:annotation-config />
 	<context:component-scan
-		base-package="Controller" />
+		base-package="posojt" />
 		
 		
 	<!-- MVC, Resource, Property Configuration -->
@@ -34,6 +34,23 @@
 		</property>
 	</bean>
 	
+	<!-- Tiles Configuration -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="order" value="0" />
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	</bean>
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/layouts/layouts.xml</value>
+				<value>/WEB-INF/layouts/AdminContent.xml</value>
+			</list>
+		</property>
+	</bean>
 	
 	<!-- View Configuration -->
 	<bean
