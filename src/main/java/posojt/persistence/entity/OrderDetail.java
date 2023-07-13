@@ -23,7 +23,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "order_details")
-public class Order_details {
+public class OrderDetail {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -43,9 +43,9 @@ public class Order_details {
 	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
-	private Orders order;
+	private Order order;
 	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
-	private Products product;
+	private Product product;
 }

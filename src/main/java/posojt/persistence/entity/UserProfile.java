@@ -21,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "user_profiles")
-public class User_profiles {
+public class UserProfile {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -43,6 +43,6 @@ public class User_profiles {
 	
 	@OneToOne
 	@JoinColumn(name = "user_id")
-	private Users user;
+	private User user;
 
 }

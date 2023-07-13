@@ -22,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "categories")
-public class Categories {
+public class Category {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -37,6 +37,6 @@ public class Categories {
 	@UpdateTimestamp
 	private Date update_at;
 	
-	@OneToMany(mappedBy = "categories",cascade = CascadeType.ALL)
-	private List<Sub_categories> sub_categories; 
+	@OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
+	private List<SubCategory> subCategory; 
 }

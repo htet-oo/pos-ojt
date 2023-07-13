@@ -22,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "product_photos")
-public class Product_photos {
+public class ProductPhoto {
 
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -39,6 +39,6 @@ public class Product_photos {
 	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
-	private Products products;
+	private Product product;
 
 }

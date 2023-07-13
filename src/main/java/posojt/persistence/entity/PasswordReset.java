@@ -21,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "password_resets")
-public class Password_resets {
+public class PasswordReset {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private int id;

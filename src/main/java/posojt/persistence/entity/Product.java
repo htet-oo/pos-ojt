@@ -24,7 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "products")
-public class Products {
+public class Product {
 
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -63,17 +63,17 @@ public class Products {
 	
 	@ManyToOne
 	@JoinColumn(name = "shop_id")
-	private Shops shop;
+	private Shop shop;
 	
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL)
-	private List<Order_details> order_details;
+	private List<OrderDetail> orderDetail;
 	
 	@ManyToOne
 	@JoinColumn(name = "sub_category_id")
-	private Sub_categories sub_categories;
+	private SubCategory subCategory;
 	
-	@OneToMany(mappedBy = "products",cascade = CascadeType.ALL)
-	private List<Product_photos> product_photos;
+	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL)
+	private List<ProductPhoto> productPhoto;
 	
 	public enum Type{
 		instock,preorder;

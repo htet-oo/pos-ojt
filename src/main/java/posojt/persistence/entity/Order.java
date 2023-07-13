@@ -26,7 +26,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "orders")
-public class Orders {
+public class Order {
 
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -49,10 +49,10 @@ public class Orders {
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private Users user;
+	private User user;
 	
 	@OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
-	private List<Order_details> order_details;
+	private List<OrderDetail> orderDetail;
 	
 	public enum Status{
 		pending,complete,cancle;

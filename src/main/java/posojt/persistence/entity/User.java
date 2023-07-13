@@ -24,7 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "users")
-public class Users {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -49,16 +49,16 @@ public class Users {
 	
 	@OneToOne
 	@JoinColumn(name = "role_id")
-	private Roles role;
+	private Role role;
 	
 	@OneToOne(mappedBy = "user")
-	private User_profiles user_profile;
+	private UserProfile user_profile;
 	
 	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-	private List<Orders> orders;
+	private List<Order> order;
 	
 	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-	private List<Shops> shop;
+	private List<Shop> shop;
 	
 
 }

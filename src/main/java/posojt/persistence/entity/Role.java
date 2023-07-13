@@ -20,7 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "roles")
-public class Roles {
+public class Role {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -35,6 +35,6 @@ public class Roles {
 	private Date update_at;
 	
 	@OneToOne(mappedBy = "role")
-	private Users user;
+	private User user;
 	
 }
