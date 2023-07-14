@@ -3,6 +3,6 @@
 <tiles-definitions>
 	<definition name="sellerShopList" extends="sellerTemplate">
 		<put-attribute name="title" value="User list"/>
-		<put-attribute name="body" value="/WEB-INF/pages/seller/shopList.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/shop/shopList.jsp"></put-attribute>
 	</definition>
 </tiles-definitions>
