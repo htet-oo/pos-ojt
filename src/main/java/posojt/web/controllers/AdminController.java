@@ -9,15 +9,19 @@ public class AdminController {
 
 	@RequestMapping("/admin/userList")
 	public ModelAndView adminUserList() {
-		System.out.println("Hello");
 		ModelAndView mv = new ModelAndView("adminUserList");
 		return mv;
 	}
 	
 	@RequestMapping("/admin/shopList")
 	public ModelAndView adminShopList() {
-		System.out.println("Hello");
 		ModelAndView mv = new ModelAndView("adminShopList");
+		return mv;
+	}
+	
+	@RequestMapping("/admin/home")
+	public ModelAndView adminHome() {
+		ModelAndView mv = new ModelAndView();
 		return mv;
 	}
 

@@ -1,0 +1,40 @@
+.photo-div,.form-div{
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+}
+.photo-div{
+    background-image: url("../img/shopping.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-div{
+    background-image: url("../img/shopping.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    width: 400px;
+    border: none;
+}
+.form-control::placeholder{
+    text-align: center;
+}
+a{
+    color: white;
+    font-weight: bold;
+}
+button{
+    width:400px;
+    background-color: aqua;
+}
