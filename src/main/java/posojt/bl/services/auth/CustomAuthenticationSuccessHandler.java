@@ -1,4 +1,4 @@
-package pos.bl.services.auth;
+package posojt.bl.services.auth;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -20,13 +20,25 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
 		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-        if (authorities.contains(new SimpleGrantedAuthority("Admin"))) {
-            response.sendRedirect("admin/home");
-        } else if (authorities.contains(new SimpleGrantedAuthority("User"))) {
-        	response.sendRedirect("user/home");
-        }else {
-        	response.sendRedirect("seller/home");
+        
+	
+		if (authorities.contains(new SimpleGrantedAuthority("Admin"))) {
+			System.out.println("before admin");
+			response.sendRedirect("admin/home");
         }
+		
+		
+		if (authorities.contains(new SimpleGrantedAuthority("Seller"))) {
+			System.out.println("before seller");
+			response.sendRedirect("seller/home");
+		}
+		
+		if (authorities.contains(new SimpleGrantedAuthority("User"))) {
+			System.out.println("before seller");
+			response.sendRedirect("user/home");
+		}
+		
+		
 	}
 
 }
