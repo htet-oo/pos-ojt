@@ -46,7 +46,7 @@ public class Shop {
 	private String address;
 	
 	@Column(nullable = false)
-	private String phon_number;
+	private String phone_number;
 	
 	private boolean is_reject;
 	

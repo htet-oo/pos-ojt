@@ -14,10 +14,10 @@ public class ResetPassword {
 	@NotBlank
 	private String email;
 	
-	@NotBlank
+	@NotBlank(message = "Please Enter Password")
 	private String password;
 	
-	@NotBlank
+	@NotBlank(message = "Please Enter Confim Password")
 	private String confirmPassword;
 
 }
