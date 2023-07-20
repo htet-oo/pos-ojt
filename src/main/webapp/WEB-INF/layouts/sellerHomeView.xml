@@ -5,4 +5,26 @@
 		<put-attribute name="title" value="User list"/>
 		<put-attribute name="body" value="/WEB-INF/pages/seller/shop/shopList.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="sellerShopCreate" extends="sellerTemplate">
+		<put-attribute name="title" value="Shop Create"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/shop/createShop.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerShopEdit" extends="sellerTemplate">
+		<put-attribute name="title" value="Shop Edit"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/shop/shopEdit.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerShopDetails" extends="sellerTemplate">
+		<put-attribute name="title" value="Shop Details"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/shop/shopDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerProductCreate" extends="sellerTemplate">
+		<put-attribute name="title" value="Product Create"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/product/createProduct.jsp"></put-attribute>
+	</definition>
+	
+	
 </tiles-definitions>

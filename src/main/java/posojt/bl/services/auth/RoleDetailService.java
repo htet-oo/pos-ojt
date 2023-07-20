@@ -21,9 +21,6 @@ public class RoleDetailService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userDao.findByEmail(username);
 		UserDTO userDto = new UserDTO(user);
-		
-		System.out.println("This is email" + user.getEmail());
-		System.out.println("This is authories " + userDto.getAuthorities());
 		return userDto;
 	}
 

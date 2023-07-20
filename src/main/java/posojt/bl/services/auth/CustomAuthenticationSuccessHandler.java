@@ -23,18 +23,15 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         
 	
 		if (authorities.contains(new SimpleGrantedAuthority("Admin"))) {
-			System.out.println("before admin");
 			response.sendRedirect("admin/home");
         }
 		
 		
 		if (authorities.contains(new SimpleGrantedAuthority("Seller"))) {
-			System.out.println("before seller");
 			response.sendRedirect("seller/home");
 		}
 		
 		if (authorities.contains(new SimpleGrantedAuthority("User"))) {
-			System.out.println("before seller");
 			response.sendRedirect("user/home");
 		}
 		

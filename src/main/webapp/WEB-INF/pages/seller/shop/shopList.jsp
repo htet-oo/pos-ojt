@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
@@ -31,7 +32,8 @@
 					<div class="col-12">
 						<div class="card">
 							<div class="card-header">
-								<a href="form.html" class="btn btn-primary float-right">Add
+								<c:url value="/seller/createShop" var="createShop"></c:url>
+								<a href="${createShop}" class="btn btn-primary float-right">Add
 									New</a>
 							</div>
 							<!-- /.card-header -->
@@ -39,69 +41,34 @@
 								<table id="example2" class="table table-bordered table-hover">
 									<thead>
 										<tr>
-											<th>Owner Name</th>
 											<th>Shop Name</th>
 											<th>Phone Number</th>
+											<th>Details</th>
 											<th>Product</th>
 											<th>Close</th>
 										</tr>
 									</thead>
-									<tbody>
-										<tr>
-											<td>Aung Aung</td>
-											<td>Aung Jewellery</td>
-											<td>09455133582</td>
-											<td>
-												<button class="btn btn-warning">Products</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Close</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>Aung Jewellery</td>
-											<td>09455133582</td>
-											<td>
-												<button class="btn btn-warning">Products</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Close</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>Aung Jewellery</td>
-											<td>09455133582</td>
-											<td>
-												<button class="btn btn-warning">Products</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Close</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>Aung Jewellery</td>
-											<td>09455133582</td>
-											<td>
-												<button class="btn btn-warning">Products</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Close</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>Aung Jewellery</td>
-											<td>09455133582</td>
-											<td>
-												<button class="btn btn-warning">Products</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Close</button>
-											</td>
-										</tr>
+									<tbody>										
+										<c:forEach items="${shopList}" var="shop">
+											<tr>
+												<td>${shop.name}</td>
+												<td>${shop.phone_number}</td>
+												<td>
+													<c:url value="/seller/shopDetails" var="shopDetails">
+														<c:param name="shopId" value="${shop.id}"></c:param>
+													</c:url>
+													<a class="btn btn-primary" href="${shopDetails}">Details</a>
+												</td>
+												<td>
+													<c:url value="/seller/productCreate" var="sellerProductCreate"></c:url>
+													<a class="btn btn-primary" href="${sellerProductCreate}">Products</a>
+												</td>
+												<td>
+													<c:url value="/seller/shopList" var="sellerShopList"></c:url>
+													<button class="btn btn-primary">Close</button>
+												</td>
+											</tr>
+										</c:forEach>
 									</tfoot>
 								</table>
 							</div>

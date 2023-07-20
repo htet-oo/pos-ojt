@@ -32,11 +32,13 @@
                         </c:if>
 				  		<form:label path="password" class="mb-2">New Password</form:label>
 				  		<form:input path="password" id="password" class="form-control" placeholder="Enter your new Password" required="required" autofocus="autofocus"/>
+				  		<form:errors path="password"></form:errors>
 				  	</div>
 				  	<div class="mb-3">
 				  		<span id="validPassword" style="color: red;"></span>
 				  		<form:label path="confirmPassword" class="mb-2">Confirm Password</form:label>
 				  		<form:input path="confirmPassword" id="confirmPassword" class="form-control" placeholder="Enter your Confirm Password" required="required"/>
+				  		<form:errors path="confirmPassword"></form:errors>
 				  	</div>
 				  	<div class="text-center">
 				  		<button type="submit" class="btn btn-primary">Change</button>

@@ -11,6 +11,7 @@
 <title><tiles:getAsString name="title" /></title>
 
 <c:url value="/resources/css/adminlte.min.css" var="adminlteCss"></c:url>
+<c:url value="/resources/css/shopRegister.css" var="shopRegister"></c:url>
 
 <!-- Google Font: Source Sans Pro -->
 <link rel="stylesheet"
@@ -25,6 +26,9 @@
 
 <!-- Theme style -->
 <link rel="stylesheet" href="${adminlteCss}">
+
+<!-- Shop Register CSS -->
+<link rel="stylesheet" href="${shopRegister}">
 
 </head>
 
