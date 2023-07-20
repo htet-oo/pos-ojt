@@ -1,5 +1,7 @@
 .photo-div,.form-div{
     width: 700px;
+    height: 500px;
+    overflow: hidden;
 }
 .photo-div{
     background-image: url("../img/shopping.avif");
@@ -38,14 +40,9 @@ button{
     width:400px;
     background-color: aqua;
 }
-.main-radioDiv{
+.error-message {
+    color: red;
+}
+.main-checkDiv{
 	width: 400px;
-}
-.radiobut{
-    width: 128px;
-    padding: 8px 0px 8px 8px;
-    background-color: white;
-}
-.errorColor{
-	color: red;
 }

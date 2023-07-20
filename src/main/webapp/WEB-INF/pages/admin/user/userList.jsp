@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
@@ -46,57 +47,19 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>Aung Aung</td>
-											<td>aung@gmail.com</td>
-											<td>
-												<button class="btn btn-danger">Restrict</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Release</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>aung@gmail.com</td>
-											<td>
-												<button class="btn btn-danger">Restrict</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Release</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>aung@gmail.com</td>
-											<td>
-												<button class="btn btn-danger">Restrict</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Release</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>aung@gmail.com</td>
-											<td>
-												<button class="btn btn-danger">Restrict</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Release</button>
-											</td>
-										</tr>
-										<tr>
-											<td>Aung Aung</td>
-											<td>aung@gmail.com</td>
-											<td>
-												<button class="btn btn-danger">Restrict</button>
-											</td>
-											<td>
-												<button class="btn btn-success">Release</button>
-											</td>
-										</tr>
-									</tfoot>
+										<c:forEach  items="${userList}" var="user">
+											<tr>
+												<td>${user.name}</td>
+												<td>${user.email}</td>
+												<td>
+													<button class="btn btn-danger">Restrict</button>
+												</td>
+												<td>
+													<button class="btn btn-success">Release</button>
+												</td>
+											</tr>
+										</c:forEach>
+									</tbody>
 								</table>
 							</div>
 							<!-- /.card-body -->

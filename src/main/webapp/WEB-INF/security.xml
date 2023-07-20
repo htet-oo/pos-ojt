@@ -14,10 +14,13 @@
 
 	<!-- Security -->
 	<bean id="customAuthenticationSuccessHandler"
-		class="pos.bl.services.auth.CustomAuthenticationSuccessHandler" />
+		class="posojt.bl.services.auth.CustomAuthenticationSuccessHandler" />
 
 	<bean id="passwordEncoder" 
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+		
+	<bean id="myUserDetailsService"
+		class="posojt.bl.services.auth.RoleDetailService"></bean>	
 		
 	<security:authentication-manager>
 		<security:authentication-provider >
@@ -26,17 +29,12 @@
 			</security:user-service>		
 		</security:authentication-provider>
 		
-		<security:authentication-provider >
-			<security:user-service>
-				<security:user name="www.htetooaa@gmail.com" authorities="Seller" password="$2a$10$C90YyF1rw7uYhCxvtNYpz.QiO8HaDnQXoc3wFEq2tMhi6cW6Ua0eO"/>
-			</security:user-service>		
+		<security:authentication-provider
+			user-service-ref="myUserDetailsService">
+			<security:password-encoder
+			ref="passwordEncoder"/>
 		</security:authentication-provider>
 		
-		<security:authentication-provider >
-			<security:user-service>
-				<security:user name="kyaw@gmail.com" authorities="User" password="$2a$10$C90YyF1rw7uYhCxvtNYpz.QiO8HaDnQXoc3wFEq2tMhi6cW6Ua0eO"/>
-			</security:user-service>		
-		</security:authentication-provider>
 	</security:authentication-manager>
 	
 	<security:http>

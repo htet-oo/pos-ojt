@@ -4,19 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sign Up</title>
+<title>Sign In</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<c:url value="/resources/css/signUp.css" var="signUpCss"></c:url>
-<link rel="stylesheet" href="${signUpCss}">
-
-<style>
-    .error-message {
-        color: red;
-        margin-left:70px;
-    }
-</style>
+<c:url value="/resources/css/signIn.css" var="signInCss"></c:url>
+<link rel="stylesheet" href="${signInCss}">
 
 <script>
     function validateForm() {
@@ -58,31 +51,32 @@
                         </div>
 
                         <div class="col-12 mt-4">
-                            <div class="d-flex justify-content-center">
+                            <div>
                                 <input type="email" name="username" class="form-control rounded-0" placeholder="Enter email address">
                             </div>
                             <div id="emailError" class="error-message"></div>
                         </div>
 
                         <div class="col-12 mt-4">
-                            <div class="d-flex justify-content-center">
+                            <div>
                                 <input type="password" name="password" class="form-control rounded-0" placeholder="Enter your password">
                             </div>
                             <div id="passwordError" class="error-message"></div>
                         </div>
 
-                        <div class="col-12 mt-2 d-flex justify-content-evenly">
+                        <div class="col-12 mt-2 d-flex  justify-content-between main-checkDiv">
                             <div class="form-check rememberMe">
                                 <input class="form-check-input" type="checkbox" name="remember-me" id="rememberMe">
                                 <label for="rememberMe" class="form-check-label">Remember Me</label>
                             </div>
                             <div class="form-check">
-                                <a href="#" class="text-decoration-none text">Recovery Password</a>
+                            	<c:url value="/recoveryPassword" var="recoveryPassword"></c:url>
+                                <a href="${recoveryPassword}" class="text-decoration-none text">Recovery Password</a>
                             </div>
                         </div>
 
                         <div class="col-12 mt-5">
-                            <div class="d-flex justify-content-center">
+                            <div>
                                 <button class="btn btn-danger rounded-0">Sign In</button>
                             </div>
                         </div>
@@ -90,7 +84,8 @@
                         <div class="col-12 mt-4">
                             <div class="d-flex justify-content-center">
                                 <p>Don't have an account yet? &nbsp;</p>
-                                <a href="#" class="text-decoration-none text"> Sign Up.</a>
+                                <c:url value="/signUp.jsp" var="signUp"></c:url>
+                                <a href="signUp" class="text-decoration-none text"> Sign Up.</a>
                             </div>
                         </div>
                     </form>
