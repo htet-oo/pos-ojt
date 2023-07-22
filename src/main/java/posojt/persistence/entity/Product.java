@@ -42,7 +42,7 @@ public class Product {
 	@Column(nullable = false)
 	private int count;
 	
-	private int size;
+	private float size;
 	
 	private String color;
 	

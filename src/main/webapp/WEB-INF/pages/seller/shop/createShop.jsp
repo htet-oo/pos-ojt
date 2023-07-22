@@ -112,3 +112,19 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
+	
+	<script>
+		document.getElementById('categorySelect').addEventListener('change', function() {
+		    var selectedCategoryId = this.value;
+		    var subcategorySelect = document.getElementById('subcategorySelect');
+		    subcategorySelect.innerHTML = '<option value="">Select Subcategory</option>';
+		    for (var i = 0; i < subcategories.length; i++) {
+		        if (subcategories[i].category_id === selectedCategoryId) {
+		            var option = document.createElement('option');
+		            option.value = subcategories[i].id;
+		            option.text = subcategories[i].name;
+		            subcategorySelect.appendChild(option);
+		        }
+		    }
+		});
+	</script>

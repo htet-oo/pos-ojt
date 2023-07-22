@@ -85,7 +85,7 @@
 										</div>
 									</div>
 									
-								     <div class="d-flex justify-content-center">
+								    <div class="d-flex justify-content-center">
 								      <div class="col-10 mb-3">
 								        <div class="row">
 								          <div class="col-6 text-left">
