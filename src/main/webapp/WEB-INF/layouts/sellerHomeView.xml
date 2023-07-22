@@ -26,5 +26,26 @@
 		<put-attribute name="body" value="/WEB-INF/pages/seller/product/createProduct.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="sellerProductDetails" extends="sellerTemplate">
+		<put-attribute name="title" value="Product Details"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/product/productDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerProductList" extends="sellerTemplate">
+		<put-attribute name="title" value="Product List"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/product/productList.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerProductAddImage" extends="sellerTemplate">
+		<put-attribute name="title" value="Add Image"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/product/addImage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sellerProductEdit" extends="sellerTemplate">
+		<put-attribute name="title" value="Add Image"/>
+		<put-attribute name="body" value="/WEB-INF/pages/seller/product/productEdit.jsp"></put-attribute>
+	</definition>
+
+	
 	
 </tiles-definitions>
